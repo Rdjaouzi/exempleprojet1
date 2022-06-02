@@ -3,16 +3,21 @@ public class Student {
     // les attributs
     private String name ;
     private String surname;
-    private int department;
+    private String department;
     private String formation;
-    private int yearTraining;
+    private String yearTraining;
+
+    // paramètre de position dans l'arbre
+    private String posHimself
+    private String posFather ;
+    private String posLeftSon;
+    private String posRight
 
     // Constructeur vide
     public Student() {
     }
 
     // constructeur sur charger
-
     public Student(String name, String surname, int department, String formation, int yearTraining) {
         this.name = name;
         this.surname = surname;
@@ -22,7 +27,6 @@ public class Student {
     }
 
     // getters
-
     public String getName() {
         return name;
     }
@@ -38,6 +42,19 @@ public class Student {
     public int getYearTraining() {
         return yearTraining;
     }
+    public String getPosHimself() {
+        return posHimself;
+    }
+    public String getPosFather() {
+        return posFather;
+    }
+    public String getPosLeftSon() {
+        return posLeftSon;
+    }
+    public String getPosRight() {
+        return posRight;
+    }
+
     //  setters
     public void setSurname(String surname) {
         this.surname = surname;
@@ -54,15 +71,14 @@ public class Student {
     public void setYearTraining(int yearTraining) {
         this.yearTraining = yearTraining;
     }
-
-    @Override
-    public String toString() {
-        return "Student{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", department=" + department +
-                ", formation='" + formation + '\'' +
-                ", yearTraining=" + yearTraining +
-                '}';
+    public void setPosHimself(String posHimself) {this.posHimself = posHimself;}
+    public void setPosFather(String posFather) {
+        this.posFather = posFather;
+    }
+    public void setPosLeftSon(String posLeftSon) {
+        this.posLeftSon = posLeftSon;
+    }
+    public void setPosRight(String posRight) {
+        this.posRight = posRight;
     }
 }
